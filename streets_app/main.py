@@ -5,7 +5,7 @@ from flask_marshmallow import Marshmallow
 db = SQLAlchemy()
 ma = Marshmallow()
 
-def create_app():
+def create_app(*args, **kwargs):
     
     # Creating the flask app object - this is the core of our app!
     app = Flask(__name__)
