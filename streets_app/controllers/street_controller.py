@@ -7,9 +7,9 @@ streets = Blueprint('streets', __name__)
 
 @streets.route('/')
 def index():
-    # data = {
-    #     "page_title": "Street Index",
-    #     "streets": multi_street_schema.dump(Street.query.all()) 
-    # }
-    #print(data)
-    return "Hello World!"#render_template("index.html", page_data=data)
+    data = {
+        "page_title": "Street Index",
+        "streets": multi_street_schema.dump(Street.query.all()) 
+    }
+    print(data)
+    return render_template("index.html", page_data=data)

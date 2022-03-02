@@ -1,4 +1,4 @@
-# /etc/systemd/system/helloworld.service
+# /etc/systemd/system/streets_app.service
 
 [Unit]
 Description=Gunicorn instance for a simple flood tracking app
