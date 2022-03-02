@@ -12,4 +12,4 @@ def index():
         "streets": multi_street_schema.dump(Street.query.all()) 
     }
     print(data)
-    return render_template("index.html", page_data=data)
+    return "Hello World!"#render_template("index.html", page_data=data)
