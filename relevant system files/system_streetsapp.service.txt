@@ -1,13 +1,14 @@
 # /etc/systemd/system/streets_app.service
 
 [Unit]
-Description=Gunicorn instance for a simple flood tracking app
+Description=Gunicorn instance for a simple hello world app
 After=network.target
 [Service]
 User=ubuntu
 Group=www-data
 WorkingDirectory=/home/ubuntu/streets_app/streets_app
-ExecStart=/home/ubuntu/streets_app/venv/bin/gunicorn -b localhost:8000 main:create_app
+ExecStart=/home/ubuntu/streets_app/venv/bin/gunicorn -b localhost:8000 "main:create_app()"
+EnvironmentFile=/home/ubuntu/streets_app/.env
 Restart=always
 [Install]
 WantedBy=multi-user.target
